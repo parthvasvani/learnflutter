@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:practice_app/style_text.dart';
 
+import 'dice_roll.dart';
+
 var startAlignment = Alignment.topLeft;
 var endAlignment = Alignment.bottomRight;
 
@@ -13,15 +15,14 @@ class GradientContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: colors,
-            begin: startAlignment,
-            end: endAlignment,
-          )),
-      child: const Center(
-        child: StyleText("PARTH"),
-      ),
+      color: Colors.white,
+      // decoration: BoxDecoration(
+      //     gradient: LinearGradient(
+      //   colors: colors,
+      //   begin: startAligment,
+      //   end: endAligement,
+      // )),
+      child: const Center(child: RollDice()),
     );
   }
 }
