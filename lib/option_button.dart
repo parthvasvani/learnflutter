@@ -14,7 +14,7 @@ class OptionButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 3.5),
       child: ElevatedButton(onPressed: onTop,
           style: ElevatedButton.styleFrom(
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
               backgroundColor: Colors.grey[700],
               foregroundColor: Colors.white,
               shape: ContinuousRectangleBorder(borderRadius: BorderRadius.circular(10)),

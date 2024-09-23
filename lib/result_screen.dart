@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:practice_app/question_summary.dart';
+import 'package:practice_app/questions_summary/question_summary.dart';
 import 'package:practice_app/questions.dart';
 
 class ResultScreen extends StatelessWidget {
@@ -30,9 +30,9 @@ class ResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var summarydata = getSummaryData();
+    var summaryData = getSummaryData();
     var noTotalQuestion = questions.length;
-    var noAnsQuestion = summarydata.where((element){
+    var noAnsQuestion = summaryData.where((element){
       return element["answer"] == element["user_answer"];
     }).length;
     print(noAnsQuestion);
@@ -49,10 +49,11 @@ class ResultScreen extends StatelessWidget {
             const SizedBox(height: 30,),
             QuestionSummary(summaryAns: getSummaryData()),
             const SizedBox(height: 30,),
-            TextButton( onPressed: restartQuiz,
+            OutlinedButton( onPressed: restartQuiz,
                 child:  Text("Restart Quiz", style: GoogleFonts.notoSerif(
                   fontSize: 20,
-                  color: Colors.grey[700]
+                  color: Colors.black,
+
                 ),))
           ],
         ),

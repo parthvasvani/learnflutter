@@ -52,4 +52,49 @@ var questions = [
       'By calling updateState()',
     ],
   ),
+  QuizQuestion(
+    'Who developed the Flutter Framework and continues to maintain it today?',
+    [
+      "Google",
+      "Facebook",
+      "Microsoft",
+      "Oracle",
+    ],
+  ),
+  QuizQuestion(
+    'Which programming language is used to build Flutter applications?',
+    [
+      "Dart",
+      "Kotlin",
+      "Java",
+      "Go",
+    ],
+  ),
+  QuizQuestion(
+    'How many types of widgets are there in Flutter?',
+    [
+      "2",
+      "4",
+      "6",
+      "8+",
+    ],
+  ),
+  QuizQuestion(
+    'When building for iOS, Flutter is restricted to an __ compilation strategy',
+    [
+      "AOT (ahead-of-time)",
+      "JIT (Just-in-time)",
+      "Transcompilation",
+      "Recompilation",
+    ],
+  ),
+  QuizQuestion(
+    'A sequence of asynchronous Flutter events is known as a:',
+    [
+      "Stream",
+      "Flow",
+      "Current",
+      "Series",
+    ],
+  ),
 ];

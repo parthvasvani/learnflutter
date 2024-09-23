@@ -12,20 +12,19 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-
   List<String> selectedAns = [];
 
   String activeScreen = "start-screen";
 
-  void switchScreen(){
+  void switchScreen() {
     setState(() {
       activeScreen = "questions-screen";
     });
   }
 
-  void chooseAns(String ans){
+  void chooseAns(String ans) {
     selectedAns.add(ans);
-    if(selectedAns.length == questions.length){
+    if (selectedAns.length == questions.length) {
       setState(() {
         //selectedAns = [];
         activeScreen = "result-screen";
@@ -33,30 +32,32 @@ class _QuizState extends State<Quiz> {
     }
   }
 
-  void restartQuiz(){
+  void restartQuiz() {
     setState(() {
       selectedAns = [];
       activeScreen = "start-screen";
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     Widget? sta;
-    if (activeScreen == "start-screen"){
+    if (activeScreen == "start-screen") {
       sta = StartScreen(switchScreen);
-    }else if(activeScreen == "result-screen"){
+    } else if (activeScreen == "result-screen") {
       sta = ResultScreen(
-          chosenAns: selectedAns,
-          restartQuiz: restartQuiz,
+        chosenAns: selectedAns,
+        restartQuiz: restartQuiz,
       );
-    } else{
-      sta = QuestionScreen(onSelectAnswer: chooseAns,);
+    } else {
+      sta = QuestionScreen(
+        onSelectAnswer: chooseAns,
+      );
     }
 
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.white,
         body: sta,
       ),
     );
